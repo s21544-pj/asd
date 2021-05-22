@@ -1,7 +1,7 @@
-|   |sort  |random|reversesort|
-|---|------|------|-----------|
-|QS |0.0012|0.0007|0.0009     |
-|Kop|0.0015|0.0012|0.0012     |
-|Bub|0.0003|0.0008|0.0009     |
+|   |sort  |random  |reversesort|
+|---|------|--------|-----------|
+|QS |0.3227|1004.741|580.62     |
+|Kop|0.8269|0.8361  |0.7841     |
+|Bub|837.64|406.834 |1144.58    |
 
-Porównując czasy wykonań poszczególnych algorytmów sortowanie bąbelkowe poradziło sobie zdecydowanie najszybciej, ale jest to raczej podyktowane stosunkowo niewielką ilością tablic na których sortujemy. Został prześcignięty jedynie w przypadku wymieszanych wartości gdzie lepiej sprawdził się quick sort. Kopcowanie w takim zestawieniu niestety nie sprawdziło się zbyt dobrze, ale myślę że w przypadku badziej wygmających problemów zadziałało by znacznie lepiej
+Pierwotne pomiary wymagały modyfikacji w postaci zmienay algorytmu Quick Sort na wersję iteracyjną, przy 100 tysiącach elementów tablicy rekurencja była zbyt głęboka. Zdecydowanie kopcowanie poradziło sobie najlepiej na tle pozostałych, właściwie w każdym przypadku skalując się odpowiednio do zadanego rozmiaru. Przy takiej ilości elementów bubble sort jest zbyt powolnym algorytmem, podobnie iteracyjna wersja quick sorta z racji płynnego przejścia tylko przez już posortowaną tablicę, oba algorytmy niezbyt skutecznie skalują się wraz z wielkością, w przypadku quick sorta raczej z powodu zastosowania iteracji niż samego algorytmu.
